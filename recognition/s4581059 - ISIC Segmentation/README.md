@@ -27,11 +27,11 @@ The encoder section of the improved unet architecture works by condensing the in
     - sklearn: Version 1.1.2
 
 ## Appropiate Addresses
-    - This project contains only one relevant address: the data set file address.
-    - This address should be locally stored and must contain two subfolders named
-        1. "ISIC-2017_Training_Data"
-        2. "ISIC-2017_Training_Part1_GroundTruth"
-    This file uses the address: "C:/Users/danie/Downloads/ISIC DATA/" which fits the above criteria but this can be edited using the _path variable in the train.py file
+This project contains only one relevant address: the data set file address.
+This address should be locally stored and must contain two subfolders named
+    1. "ISIC-2017_Training_Data"
+     2. "ISIC-2017_Training_Part1_GroundTruth"
+This file uses the address: "C:/Users/danie/Downloads/ISIC DATA/" which fits the above criteria but this can be edited using the _path variable in the train.py file
 
 ## Training Validation Split
 The training validation split method can be manipulated as the split ratio is a parameter to the method, however, a split of 0.2 was used (and is the default, if left unspecified) and thus 80% of the data was used for training. It is important to note the the split decimal is for equal parts validation and testing. This was used as this yielded good results in the training
@@ -83,14 +83,14 @@ For mask comparison predictions see ./imgs/mask.png (shows 4 random samples)
 
 ## Example Use:
 This repository contains the saved file for the model of which's data is shown to load the file. Add the follow to the predict.py file: 
-if __name__ == "__main__":
-    saved_model = load_saved_model()
-    saved_model.summary() <- will show the model summary
+    if __name__ == "__main__":
+        saved_model = load_saved_model()
+        saved_model.summary() <- will show the model summary
 These can be run using the bash equivalent from terminal, however, will not be able to allow change to private variables such as _path
 
 Analagously, to train the network, the following can be added to the train.py file:
-if __name__ == "__main__":
-    train_model()
+    if __name__ == "__main__":
+        train_model()
 
 ## Bibliography
 [1] Fabian Isensee et al. (2018, February 28), Brain Tumor Segmentation and Radiomics Survival Prediction: Contribution to the BRATS 2017 Challenge, available at: https://arxiv.org/pdf/1802.10508v1.pdf
